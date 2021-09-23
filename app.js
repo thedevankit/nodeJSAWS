@@ -4,6 +4,15 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+var mysql = require('mysql');
+var con = mysql.createConnection({
+  host: "XXXX",
+  user: "XXXX",
+  password: "XXXX"
+});
+
+
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
